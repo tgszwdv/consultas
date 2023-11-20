@@ -25,6 +25,7 @@ function checkPassword() {
     var enteredPassword = document.getElementById('accessPassword').value;
     if (enteredPassword === correctPassword) {
         document.getElementById('password-modal').style.display = 'none';
+        document.querySelector('.container').style.display = 'block';
         // Show the site content
         document.body.style.display = 'block';
         // Exibe consultas existentes ao carregar a página
