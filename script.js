@@ -16,7 +16,7 @@ firebase.analytics();
 var database = firebase.database();
 
 // Password for accessing the site
-var correctPassword = ""; // Troque pela sua senha
+var correctPassword = "1234*"; // Troque pela sua senha
 
 // Show the password modal on page load
 document.getElementById('password-modal').style.display = 'block';
