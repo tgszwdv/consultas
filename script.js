@@ -78,7 +78,7 @@ function removerConsulta(key) {
 
 function formatarData(data) {
     var partes = data.split('-');
-    return partes[2] + '/' + partes[1] + '/' + partes[0].slice(-2);
+    return partes[2] + '/' + partes[1] + '/' + partes[0].slice(-4);
 }
 
 function exibirConsultas() {
