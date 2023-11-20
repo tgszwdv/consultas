@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas e Retornos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="password-modal">
+        <h2>Digite a senha de acesso:</h2>
+        <input type="password" id="accessPassword">
+        <button onclick="checkPassword()">Entrar</button>
+    </div>
+
+    <div class="container" >
+
+        <h1>Agendamento de Consultas</h1>
+
+        <form id="appointment-form">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" required>
+
+            <label for="data">Data:</label>
+            <input type="date" id="data" required>
+
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" required>
+
+            <label for="nomeMedico">Nome do Médico:</label>
+            <input type="text" id="nomeMedico" required>
+
+            <button type="button" onclick="agendarConsulta()">Agendar Consulta</button>
+        </form>
+
+        <div id="appointment-container"></div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
