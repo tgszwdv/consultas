@@ -69,11 +69,16 @@ function agendarConsulta() {
 }
 
 function removerConsulta(key) {
-    var appointmentsRef = database.ref('consultas');
-    appointmentsRef.child(key).remove();
+    // Pede uma confirmação antes de remover a consulta
+    var confirmacao = confirm('Deseja realmente remover esta consulta?');
 
-    // Atualiza a exibição
-    exibirConsultas();
+    if (confirmacao) {
+        var appointmentsRef = database.ref('consultas');
+        appointmentsRef.child(key).remove();
+
+        // Atualiza a exibição
+        exibirConsultas();
+    }
 }
 
 function formatarData(data) {
